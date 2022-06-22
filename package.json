@@ -2,7 +2,16 @@
   "name": "e-commerce",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install",
+    "test": "nx affected:test",
+    "test:all": "nx run-many --all --target=test",
+    "lint": "nx affected:lint",
+    "lint:all": "nx run-many --all --target=lint",
+    "build": "nx run-many --all --target=build",
+    "e2e": "nx affected:e2e",
+    "e2e:all": "nx run-many --all --target=e2e"
+  },
   "private": true,
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",
@@ -22,6 +31,7 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
     "jest": "27.5.1",
     "nx": "14.3.6",
     "prettier": "^2.6.2",

@@ -1,12 +1,14 @@
 import { Injectable } from '@nestjs/common'
 
+export type UnixTimeMilli = number
+
 export abstract class Clock {
-  abstract now(): Date
+  abstract now(): UnixTimeMilli
 }
 
 @Injectable()
 export class SystemClock extends Clock {
-  now(): Date {
-    return new Date()
+  now(): UnixTimeMilli {
+    return Date.now()
   }
 }

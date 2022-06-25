@@ -1,4 +1,4 @@
-export abstract class Entity<TId, TProps extends { [key: string]: any }> {
+export abstract class Entity<TId, TProps extends { [key: string]: unknown }> {
   readonly id: TId
   protected props: TProps
 

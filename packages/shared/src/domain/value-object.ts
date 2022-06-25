@@ -1,10 +1,10 @@
-import { isEqual } from 'lodash'
+import { cloneDeep, isEqual } from 'lodash'
 
-export abstract class ValueObject<TProps extends { [key: string]: any }> {
-  readonly props: TProps
+export abstract class ValueObject<TProps extends { [key: string]: unknown }> {
+  readonly props: Readonly<TProps>
 
   constructor(props: TProps) {
-    this.props = Object.freeze(props)
+    this.props = Object.freeze(cloneDeep(props))
   }
 
   equals(vo?: ValueObject<TProps>): boolean {

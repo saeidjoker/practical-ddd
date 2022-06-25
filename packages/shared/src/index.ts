@@ -7,3 +7,4 @@ export * from './domain/not-found.error'
 
 export * from './domain/value-object'
 export * from './domain/entity'
+export * from './domain/domain-event'

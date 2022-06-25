@@ -6,3 +6,4 @@ export * from './domain/invalid-argument.error'
 export * from './domain/not-found.error'
 
 export * from './domain/value-object'
+export * from './domain/entity'

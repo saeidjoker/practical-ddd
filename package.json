@@ -25,6 +25,7 @@
     "@nrwl/node": "14.3.6",
     "@nrwl/workspace": "14.3.6",
     "@types/jest": "27.4.1",
+    "@types/lodash": "^4.14.182",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.24.0",
     "@typescript-eslint/parser": "~5.24.0",
@@ -43,6 +44,7 @@
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "lodash.isequal": "^4.5.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"

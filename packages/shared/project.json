@@ -1,23 +1,23 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/kernel/src",
+  "sourceRoot": "packages/shared/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/kernel",
-        "tsConfig": "packages/kernel/tsconfig.lib.json",
-        "packageJson": "packages/kernel/package.json",
-        "main": "packages/kernel/src/index.ts",
-        "assets": ["packages/kernel/*.md"]
+        "outputPath": "dist/packages/shared",
+        "tsConfig": "packages/shared/tsconfig.lib.json",
+        "packageJson": "packages/shared/package.json",
+        "main": "packages/shared/src/index.ts",
+        "assets": ["packages/shared/*.md"]
       }
     },
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "node tools/scripts/publish.mjs kernel {args.ver} {args.tag}"
+        "command": "node tools/scripts/publish.mjs shared {args.ver} {args.tag}"
       },
       "dependsOn": [
         {
@@ -30,14 +30,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/kernel/**/*.ts"]
+        "lintFilePatterns": ["packages/shared/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/kernel"],
+      "outputs": ["coverage/packages/shared"],
       "options": {
-        "jestConfig": "packages/kernel/jest.config.ts",
+        "jestConfig": "packages/shared/jest.config.ts",
         "passWithNoTests": true
       }
     }

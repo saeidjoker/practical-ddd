@@ -28,5 +28,5 @@
     "appsDir": "packages",
     "libsDir": "packages"
   },
-  "defaultProject": "web"
+  "defaultProject": "api"
 }

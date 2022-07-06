@@ -2,8 +2,8 @@ pre-commit:
 parallel: true
 commands:
   linter:
-    run: npm run lint
+    run: cd practical-ddd && npm run lint
   test:
-    run: npm test
+    run: cd practical-ddd && npm test
   e2e:
-    run: npm run e2e
+    run: cd practical-ddd && npm run e2e

@@ -2,7 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "kernel": "packages/kernel",
-    "web": "packages/web"
+    "api": "packages/api",
+    "shared": "packages/shared"
   }
 }
